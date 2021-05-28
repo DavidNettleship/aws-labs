@@ -13,3 +13,12 @@ A repo for various labs and experiments in AWS.
 > 2. "As above, but increment CIDR blocks appropriately. This will be **Private Subnet**"
 - [x] Modified networking\first-vpc\main.tf
 - [ ] Used cidrsubnet function to create dynamic IPv6 cidr ranges... not sure how to create subnet IDs in terraform. 
+
+**Exercise 2.3 - Connect the Custom VPC to the internet and establish routing**
+> 1. "Create an Internet Gateway with a name tag of **IGW** and attach to the custom VPC"
+> 2. "Add IPv4 and IPv6 routes to the main route table for the custom VPC that directs internet traffic (0.0.0.0/0 & ::/0) to the IGW"
+> 3. "Create a NAT Gateway, place it in the public subnet and assign an elastic IP address to it"
+> 4. "Create an EIGW for the VPC"
+> 5. "Create a new route table with a name tag of **Private Route Table** and place in the custom VPC. Add a route to direct IPv4 Internet traffic to the NAT gateway and IPv6
+traffic to the EIGW. Associate the route table with the private subnet"
+- [x] Modified networking\first-vpc\main.tf
