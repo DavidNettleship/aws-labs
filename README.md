@@ -22,3 +22,12 @@ A repo for various labs and experiments in AWS.
 > 5. "Create a new route table with a name tag of **Private Route Table** and place in the custom VPC. Add a route to direct IPv4 Internet traffic to the NAT gateway and IPv6
 traffic to the EIGW. Associate the route table with the private subnet"
 - [x] Modified networking\first-vpc\main.tf
+
+**Exercise 2.4 - Launch a public EC2 Instance and test the connection to the Internet**
+> 1. "Create an EC2 key-pair in the same region as the custom VPC"
+> 2. "Launch a t2.micro Amazon Linux AMI as an EC2 instance into the public subnet of the custom VPC with auto-assigned IP addresses. Give this instance a name tag of **Public Instance**, allow SSH access in the instance security group and select the newly created key-pair for secure access to the instance"
+> 3. "Access the instance using the key-pair and update the OS libraries by executing:
+    # sudo yum update -y"
+    
+- [x] Created new key-pair via console in ap-northeast-1
+- [x] Created new file for instance networking\first-vpc\ec2.tf

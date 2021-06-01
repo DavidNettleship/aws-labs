@@ -10,18 +10,20 @@ resource "aws_vpc" "main" {
 
 #subnets
 resource "aws_subnet" "public" {
-  vpc_id          = aws_vpc.main.id
-  cidr_block      = "192.168.1.0/24"
-  ipv6_cidr_block = cidrsubnet(aws_vpc.main.ipv6_cidr_block, 8, 161)
+  vpc_id            = aws_vpc.main.id
+  cidr_block        = "192.168.1.0/24"
+  ipv6_cidr_block   = cidrsubnet(aws_vpc.main.ipv6_cidr_block, 8, 161)
+  availability_zone = "ap-northeast-1a"
   tags = {
     Name = "Public"
   }
 }
 
 resource "aws_subnet" "private" {
-  vpc_id          = aws_vpc.main.id
-  cidr_block      = "192.168.2.0/24"
-  ipv6_cidr_block = cidrsubnet(aws_vpc.main.ipv6_cidr_block, 8, 162)
+  vpc_id            = aws_vpc.main.id
+  cidr_block        = "192.168.2.0/24"
+  ipv6_cidr_block   = cidrsubnet(aws_vpc.main.ipv6_cidr_block, 8, 162)
+  availability_zone = "ap-northeast-1c"
   tags = {
     Name = "Private"
   }
